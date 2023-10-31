@@ -1,0 +1,7 @@
+#mainBody {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    top: 106px;
+}

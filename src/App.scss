@@ -1,0 +1,27 @@
+$backgroundColorLight: '#FFF';
+$backgroundColorDark: '#000';
+
+//Text Variables
+
+//Mixin Variables
+@mixin text-primary() {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+@mixin channel-info-text() {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #AAA;
+}
+
+
+.App {
+    height: 1200px;
+    background-color: #0F0F0F;
+}
+
+@media (prefers-color-scheme: light) {
+
+}
