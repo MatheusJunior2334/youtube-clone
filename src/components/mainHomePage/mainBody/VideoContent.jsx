@@ -1,5 +1,6 @@
 import styles from './VideoContent.module.scss';
 import { VerifiedIcon } from './images/icons/VerifiedIcon';
+import { ThreeDotsIcon } from './images/icons/ThreeDotsIcon';
 
 export const VideoContent = ({ 
     thumbnailImg, videoDuration, avatarIcon, channelName, videoTitle, numberOfViews, timePosted,
@@ -35,6 +36,9 @@ export const VideoContent = ({
                         <span>{timePosted} ago</span>
                     </div>
                 </div>
+                <button className={styles.threeDots}>
+                    <ThreeDotsIcon />
+                </button>
             </div>
         </div>
     )

@@ -2,20 +2,34 @@ import { useState } from 'react';
 import styles from './SideOptions.module.scss';
 
 import { ArrowIcon } from './icons/ArrowIcon';
+import { FashionAndBeautyIcon } from './icons/FashionAndBeautyIcon';
+import { FilmsIcon } from './icons/FilmsIcon';
+import { GamingIcon } from './icons/GamingIcon';
 import { HistoryIcon } from './icons/HistoryIcon';
 import { HomeIcon } from './icons/HomeIcon';
+import { LearningIcon } from './icons/LearningIcon';
 // import { LibraryIcon } from './icons/LibraryIcon';
 import { LikedVideosIcon } from './icons/LikedVideosIcon';
+import { LiveIcon } from './icons/LiveIcon';
+import { MusicIcon } from './icons/MusicIcon';
+import { NewsIcon } from './icons/NewsIcon';
 import { PlaylistIcon } from './icons/PlaylistIcon';
+import { PodcastsIcon } from './icons/PodcastsIcon';
 import { ProfileIcon } from './icons/ProfileIcon';
 import { ShortsIcon } from './icons/ShortsIcon';
+import { SportIcon } from './icons/SportIcon';
 import { SubscriptionsIcon } from './icons/SubscriptionsIcon';
+import { TrendingIcon } from './icons/TrendingIcon';
 import { WatchLaterIcon } from './icons/WatchLaterIcon';
 import { YourVideosIcon } from './icons/YourVideosIcon';
 
+import EllenAlaverdyan from '../mainBody/images/channelAvatars/Ellen Plays Bass.jpeg';
+import JeanRemillard from '../mainBody/images/channelAvatars/Jean Rémillard.jpg';
+import RubyGranger from '../mainBody/images/channelAvatars/Ruby Granger.jpg';
+import SchoolOfRock from '../mainBody/images/channelAvatars/School of Rock.jpg';
 
 //Component props
-const SideOptionsProps = ({ icon, text, toggleExpansion}) => {
+const SideOptionsProps = ({ icon, image, text, toggleExpansion}) => {
     const [isRotated, setIsRotated] = useState(false);
     const [displayText, setDisplayText] = useState(text);
 
@@ -29,11 +43,14 @@ const SideOptionsProps = ({ icon, text, toggleExpansion}) => {
 
     return (
         <button className={styles.sideOptionsButton}
-            title={text}
+            title={displayText}
             onClick={rotateIcon}
         >
             <div className={styles.icon} style={{ transform: isRotated ? 'rotate(180deg)' : 'rotate(0deg)' }}>
                 {icon}
+                {image && (
+                    <img src={image} alt={displayText} />
+                )}
             </div>
             <p>{displayText}</p>
         </button>
@@ -68,6 +85,27 @@ const ShowMoreButtons = [
     { icon: <PlaylistIcon />, text: 'English tips' },
 ]
 
+//Side Options Button - Part 3 - Subscriptions
+const SideOptionsButton3 = [
+    { image: EllenAlaverdyan, text: 'EllenPlaysBass' },
+    { image: JeanRemillard, text: 'Jean Rémillard' },
+    { image: RubyGranger, text: 'Ruby Granger' },
+    { image: SchoolOfRock, text: 'School Of Rock' }
+]
+
+const SideOptionsButton4 = [
+    { icon: <TrendingIcon />, text: 'Trending' },
+    { icon: <MusicIcon />, text: 'Music' },
+    { icon: <FilmsIcon />, text: 'Films' },
+    { icon: <LiveIcon />, text: 'Live' },
+    { icon: <GamingIcon />, text: 'Gaming' },
+    { icon: <NewsIcon />, text: 'News' },
+    { icon: <SportIcon />, text: 'Sport' },
+    { icon: <LearningIcon />, text: 'Learning' },
+    { icon: <FashionAndBeautyIcon />, text: 'Fashion & beauty' },
+    { icon: <PodcastsIcon />, text: 'Podcasts' }
+]
+
 
 //Main code
 export const SideOptions = () => {
@@ -79,7 +117,7 @@ export const SideOptions = () => {
 
     return (
         <div id={styles.sideOptions}>
-            <div className={styles.optionsPart1}>
+            <div>
                 {SideOptionsButton1.map((icons, index) => (
                     <SideOptionsProps
                         key={index}
@@ -88,7 +126,9 @@ export const SideOptions = () => {
                 ))}
             </div>
 
-            <div className={styles.optionsPart2}>
+            <hr className={styles.lineBorder}></hr>
+
+            <div>
 
                 <button className={styles.sideOptionsButton}>
                     <p className={styles.youButton}>You</p>
@@ -124,6 +164,32 @@ export const SideOptions = () => {
                         key={index}
                         {...icons}
                         toggleExpansion={toggleExpansion}
+                    />
+                ))}
+            </div>
+
+            <hr className={styles.lineBorder}></hr>
+
+            <div>
+                <p className={styles.sideCaption}>Subscriptions</p>
+
+                {SideOptionsButton3.map((channels, index) => (
+                    <SideOptionsProps
+                        key={index}
+                        {...channels}
+                    />
+                ))}
+            </div>
+
+            <hr className={styles.lineBorder}></hr>
+
+            <div>
+                <p className={styles.sideCaption}>Explore</p>
+
+                {SideOptionsButton4.map((icon, index) => (
+                    <SideOptionsProps
+                        key={index}
+                        {...icon}
                     />
                 ))}
             </div>

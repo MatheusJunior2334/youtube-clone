@@ -4,14 +4,4 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 10px;
-}
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}

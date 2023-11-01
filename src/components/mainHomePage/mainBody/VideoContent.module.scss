@@ -4,7 +4,7 @@
     position: relative;
     //width: 47.95%; 2 videos per line
     //width: 31.85%; 3 videos per line
-    width: 400px;
+    width: 96%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -71,6 +71,7 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
+                overflow: hidden;
                 line-height: 1.2rem;
                 margin-bottom: 4px;
             }
@@ -102,6 +103,34 @@
                     }
                 }
             }
+        }
+
+        .threeDots {
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            box-sizing: content-box;
+            border: none;
+            background-color: transparent;
+            margin-top: 10px;
+            border-radius: 100%;
+            visibility: hidden;
+            cursor: pointer;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: #FFF;
+                vertical-align: middle;
+            }
+
+            &:focus {
+                background-color: #FFFFFF20;
+            }
+        }
+
+        &:hover .threeDots {
+            visibility: inherit;
         }
     }
 }
