@@ -1,0 +1,107 @@
+// overflow: hidden;
+// flex: 1;
+// flex-basis: 1e-9px;
+// overflow-y: auto;
+
+@import '../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+.sideMenuButton {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: calc(100% - 4px);
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 12px;
+    background-color: transparent;
+    cursor: pointer;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+
+        &.youButtonIcon {
+            width: 20px;
+            height: 20px;
+            transform: rotate(270deg);
+        }
+
+        svg, img {
+            fill: #FFF;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            border-radius: 100%
+        }
+    }
+
+    p {
+        @include text-primary();
+        font-size: 14px;
+        font-family: Roboto;
+        margin-left: 24px;
+
+        &.youButton {
+            margin-left: 0;
+            padding-right: 6px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &:hover, &:focus {
+        background-color: rgb(255 255 255 / 0.1);
+    }
+
+    &:hover:focus {
+        background-color: rgb(255 255 255 / 0.2);
+    }
+}
+
+#sideOptions {
+    position: fixed;
+    top: 56px;
+    width: 234px;
+    height: calc(100vh - 60px);
+    padding: 12px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    
+    z-index: 1;
+
+    &:hover {
+        scrollbar-width: thin;
+    }
+
+    .sideCaption { 
+        @include text-primary();
+        height: 32px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-family: Roboto;
+        font-weight: 500;
+        margin-left: 12px;
+    }
+
+    .lineBorder {
+        border: none;
+        border-top: 1px solid $borderColor;
+        height: 0;
+        margin: 12px 0;
+    }
+}
+
+// Responsividade
+
+@media #{$ws1313} {
+    .sideMenuButton {
+        
+    }
+}

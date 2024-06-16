@@ -1,0 +1,290 @@
+@import '../App.scss';
+
+
+$distance-top-before: 68px;
+
+//Main Styles
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    background-color: #0F0F0F;
+    top: 0;
+    font-family: Arial;
+    z-index: 999;
+   
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+
+        /*Start / Left Side*/
+
+        .leftSide {
+            width: 20%;
+            display: flex;
+            align-items: center;
+
+            .burgerMenu {
+                width: 40px;
+                height: 40px;
+                background-color: transparent;
+                border: 0;
+                border-radius: 100%;
+                transition: all 0.1s;
+
+                &:hover {
+                    background-color: #FFFFFF20;
+                }
+            
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            }
+
+            .logo {
+                width: 120px;
+                height: 56px;
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+                
+                svg {
+                    width: 90px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+            }
+
+            span {
+                font-size: 10px;
+                color: #AAA;
+                margin: 12px 0 0 -10px;
+                align-self: flex-start;
+            }
+        }
+
+        /*Center / Middle Side*/
+
+        .midSide {
+            min-width: 225px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            flex: 1;
+            flex-basis: 1e-9px;
+            padding: 0 16px;
+
+            .input {
+                width: 74%;
+                height: 40px;
+                display: flex;
+                border-radius: 40px;
+                background-color: #0F0F0F;
+                border: 2px solid rgba(168, 163, 163, 0.2);
+                  
+                input {
+                    width: 536px;
+                    max-width: calc(100% - 68px);
+                    font-size: 16px;
+                    font-weight: 400;
+                    background-color: transparent;
+                    padding-left: 16px;
+                    border: 0;
+                    outline: none;
+                    color:hsla(0, 100%, 100%, 0.88);
+                }
+
+                .searchBtn {
+                    @include before-style("Search");
+                    width: 68px;
+                    height: 100%;
+                    background-color: #FFFFFF20;
+                    border-radius: 0 25px 25px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 0;
+                    cursor: pointer;
+
+                    &::before {
+                        top: $distance-top-before;
+                    }
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        filter: invert(100%);
+                    }
+                }
+            }
+
+            .micIcon {
+                @include before-style("Search with your voice");
+                width: 40px;
+                height: 40px;
+                margin-left: 12px;
+                border-radius: 100px;
+                background-color: rgb(255 255 255 / 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.1s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(255 255 255 / 0.2);
+                }
+
+                &::before {
+                    top: $distance-top-before;
+                }
+                
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: #fff;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        /*End / Right Side*/
+    
+        .rightSide {
+            position: relative;
+            width: 21%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            button {
+                border: 0;
+                background-color: transparent;
+                border-radius: 100%;
+                transition: all 0.1s;
+
+                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 8px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #FFFFFF20;
+                    }
+                }
+
+                &:nth-of-type(1), &:nth-of-type(2) {
+                    display: none;
+                    fill: #fff;
+                }
+
+                &:nth-of-type(1) {
+                    @include before-style("Search");
+
+                    &::before {
+                        top: $distance-top-before;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    @include before-style("Search with your voice");
+
+                    &::before {
+                        top: $distance-top-before;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    @include before-style("Create");
+
+                    &::before {
+                        top: $distance-top-before;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    @include before-style("Notifications");
+
+                    &::before {
+                        top: $distance-top-before;
+                    }
+                }
+
+                &:nth-of-type(5) {
+                    width: 60px;
+                    height: 36px;
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: middle;
+                }
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    vertical-align: middle;
+                    border-radius: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Responsividade
+
+@media #{$ws656} {
+    #header {
+        nav {
+            padding: 0 8px;
+
+            .leftSide {
+                width: auto;
+            }
+
+            .midSide {
+                display: none;
+            }
+
+            .rightSide {
+                width: auto;
+
+                button {
+                    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-of-type(1), &:nth-of-type(2) {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$ws428} {
+    #header {
+        nav {
+            .rightSide {
+                button {
+                    &:nth-of-type(2), &:nth-of-type(4) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,4 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #0F0F0F;
+}
 
+:root {
+  color-scheme: dark;
+}

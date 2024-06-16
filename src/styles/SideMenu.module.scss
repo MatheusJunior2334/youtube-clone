@@ -1,0 +1,17 @@
+// overflow: hidden;
+// flex: 1;
+// flex-basis: 1e-9px;
+// overflow-y: auto;
+
+@import '../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+#sideMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 2;
+    width: 234px;
+    z-index: 999;
+    
+}

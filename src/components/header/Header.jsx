@@ -1,32 +1,32 @@
-import styles from './Header.module.scss';
+import React, { useContext } from 'react';
+import styles from '../../styles/Header.module.scss';
 
 //Left Side
-import { BurgerMenu } from './icons/BurgerMenu';
-import { YoutubeLogo } from './icons/YoutubeLogo';
+import { BurgerMenu } from '../../assets/icons/header/BurgerMenu';
+import { YoutubeLogo } from '../../assets/icons/header/YoutubeLogo';
 
 //Mid Side
-import keyboard from './icons/KeyboardIcon.gif';
-import { MagnifyingGlassIcon } from './icons/MagnifyingGlassIcon';
-import { MicIcon } from './icons/MicIcon';
+import { MagnifyingGlassIcon } from '../../assets/icons/header/MagnifyingGlassIcon';
+import { MicIcon } from '../../assets/icons/header/MicIcon';
 
 //Right Side
-import { CreateIcon } from './icons/CreateIcon';
-import { BellIcon } from './icons/BellIcon';
-import ProfileImage from './icons/ProfileImage.jpg';
-
+import { CreateIcon } from '../../assets/icons/header/CreateIcon';
+import { BellIcon } from '../../assets/icons/header/BellIcon';
+import ProfileImage from '../../assets/images/header/ProfileImage.jpg';
+import { AppContext } from '../../contexts/AppContext';
 
 export function Header() {
+    const { toggleBurgerMenu } = useContext(AppContext);
+
     return (
         <header id={styles.header}>
             <nav>
-                
                 {/*Start / Left Side*/}
                 <div className={styles.leftSide}>
-                    <button className={styles.burgerMenu}>
+                    <button className={styles.burgerMenu} onClick={toggleBurgerMenu}>
                         <BurgerMenu />
                     </button>
-                    <button className={styles.logo} title='
-                    YouTube Home'>
+                    <button className={styles.logo} title='YouTube Home'>
                         <YoutubeLogo />
                     </button>
                     <span>GB</span>
@@ -36,11 +36,6 @@ export function Header() {
                 <div className={styles.midSide}>
                     <form className={styles.input}>
                         <input type="search" placeholder='Search' />
-
-                        {/*Keyboard Icon*/}
-                        <span>
-                            <img src={keyboard} alt='Clique para digitar' />
-                        </span>
 
                         {/*Magnifying Glass Icon*/}
                         <button className={styles.searchBtn}>
@@ -56,6 +51,14 @@ export function Header() {
 
                 {/*End / Right Side*/}
                 <div className={styles.rightSide}>
+                    <button>
+                        <MagnifyingGlassIcon />
+                    </button>
+
+                    <button>
+                        <MicIcon /> 
+                    </button>
+
                     {/*Create Icon*/}
                     <button>
                         <CreateIcon />

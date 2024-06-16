@@ -1,0 +1,22 @@
+@import '../App.scss';
+
+#mainContent {
+    position: relative;
+    display: flex;
+
+    .innerMain {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// Responsividade
+
+@media #{$ws791} {
+    #mainContent {
+        .sideOptions {
+            display: none;
+        }
+    }
+}

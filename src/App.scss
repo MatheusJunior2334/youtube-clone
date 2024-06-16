@@ -1,25 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+$ws1313: '(max-width: 1313px)';
+$ws1170: '(max-width: 1170px)';
+$ws1097: '(max-width: 1097px)';
+$ws791: '(max-width: 791px)';
+$ws700: '(max-width: 700px)';
+$ws656: '(max-width: 656px)';
+$ws428: '(max-width: 428px)';
+$ws420: '(max-width: 420px)';
+
 $backgroundColorLight: '#FFF';
 $backgroundColorDark: '#000';
+
+$borderColor: rgb(255 255 255 / 0.2);
 
 //Text Variables
 
 //Mixin Variables
+@mixin title-text() {
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #f1f1f1;
+}
+
 @mixin text-primary() {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    font-family: Roboto;
+    color: #f1f1f1;
 }
 
 @mixin channel-info-text() {
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto;
     color: #AAA;
 }
 
+//Styles of "::before" when it is activated
+@mixin before-style($content) {
 
-.App {
-    height: 1200px;
-    background-color: #0F0F0F;
+    &::before {
+        content: $content;
+        position: absolute;
+        pointer-events: none;
+        color: #f1f1f1;
+        background-color: #555555ea;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,0 +1,70 @@
+@import '../App.scss';
+
+#topOptions {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    top: 56px;
+    left: 234px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 998;
+    background-color: #0F0F0F;
+    column-gap: 12px;
+    margin-left: 18px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.menuOpen {
+        left: 64px;
+    }
+}
+
+//Buttons Styles
+
+.topOptionsButtons {
+    position: relative;
+    height: 32px;
+    background-color: rgb(255 255 255 / 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 0px 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        @include channel-info-text();
+        white-space: nowrap;
+        color: #f1f1f1;
+        font-weight: 500;
+    }
+
+    &:first-of-type {       
+        background-color: #f1f1f1;
+
+        p {
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+
+// Responsividade
+
+@media #{$ws791} {
+    #topOptions {
+        left: 0;
+        margin-left: 0;
+        padding-left: 12px;
+
+        &.menuOpen {
+            left: 0;
+        }
+    }
+}
