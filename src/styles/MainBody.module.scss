@@ -7,7 +7,7 @@
     margin-left: auto;
 
     &.menuOpen {
-        width: calc(100% - 94px);;
+        width: calc(100% - 94px);
     }
 
     .videosContainer {
@@ -88,7 +88,6 @@
             justify-content: center;
 
             button {
-                @include before-style(attr(data-content));
                 position: absolute;
                 width: 360px;
                 display: inline-flex;
@@ -162,6 +161,12 @@
 }
 
 // Responsividade
+
+@media #{$ws1313} {
+    #mainBody {
+        width: calc(100% - 94px);
+    }
+}
 
 @media #{$ws1170} {
     #mainBody {

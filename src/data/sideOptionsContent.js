@@ -24,14 +24,15 @@ import { YoutubeStudioIcon } from '../assets/icons/side-options/YoutubeStudioIco
 import { YoutubeMusicIcon } from '../assets/icons/side-options/YoutubeMusicIcon';
 import { YoutubeKidsIcon } from '../assets/icons/side-options/YoutubeKidsIcon';
 
-import BruceSpringsteen from '../assets/images/channel-avatars/Bruce Springsteen.jpg';
-import EasyLanguages from '../assets/images/channel-avatars/Easy Languages.jpg';
-import EllenAlaverdyan from '../assets/images/channel-avatars/Ellen Plays Bass.jpeg';
-import JeanRemillard from '../assets/images/channel-avatars/Jean Rémillard.jpg';
-import RubyGranger from '../assets/images/channel-avatars/Ruby Granger.jpg';
-import SchoolOfRock from '../assets/images/channel-avatars/School of Rock.jpg';
-import StevieWonder from '../assets/images/channel-avatars/Stevie Wonder.jpg';
-import UnJadedJade from '../assets/images/channel-avatars/Unjaded Jade.jpg';
+import BruceSpringsteen from '../assets/images/channel-avatars/BruceSpringsteen.jpg';
+import EasyLanguages from '../assets/images/channel-avatars/EasyLanguages.jpg';
+import EllenAlaverdyan from '../assets/images/channel-avatars/EllenPlaysBass.jpeg';
+import JeanRemillard from '../assets/images/channel-avatars/JeanRémillard.jpg';
+import Lony from '../assets/images/channel-avatars/Lony.jpg';
+import RubyGranger from '../assets/images/channel-avatars/RubyGranger.jpg';
+import SchoolOfRock from '../assets/images/channel-avatars/SchoolOfRock.jpg';
+import StevieWonder from '../assets/images/channel-avatars/StevieWonder.jpg';
+import UnJadedJade from '../assets/images/channel-avatars/UnjadedJade.jpg';
 import ZeldaUniverse from '../assets/images/channel-avatars/Zelda.jpg';
 
 import { SettingsIcon } from '../assets/icons/side-options/SettingsIcon';
@@ -68,7 +69,8 @@ export const subscriptionsButtons = [
     { image: ZeldaUniverse, text: 'Zelda Universe' },
     { image: BruceSpringsteen, text: 'Bruce Springsteen' },
     { image: UnJadedJade, text: 'UnJaded Jade' },
-    { image: StevieWonder, text: 'Stevie Wonder' }
+    { image: StevieWonder, text: 'Stevie Wonder' },
+    { image: Lony, text: 'Ladies Of NewYork' }
 ]
 
 export const exploreButtons = [
@@ -79,16 +81,16 @@ export const exploreButtons = [
     { icon: <GamingIcon />, text: 'Gaming' },
     { icon: <NewsIcon />, text: 'News' },
     { icon: <SportIcon />, text: 'Sport' },
-    { icon: <LearningIcon />, text: 'Learning' },
+    { icon: <LearningIcon />, text: 'Courses' },
     { icon: <FashionAndBeautyIcon />, text: 'Fashion & beauty' },
     { icon: <PodcastsIcon />, text: 'Podcasts' }
 ]
 
 export const moreYoutubeButtons = [
-    { icon: <YoutubeDefaultIcon />, text: 'Youtube Premium' },
-    { icon: <YoutubeStudioIcon />, text: 'Youtube Studio' },
-    { icon: <YoutubeMusicIcon />, text: 'Youtube Music' },
-    { icon: <YoutubeKidsIcon />, text: 'Youtube Kids' }
+    { icon: <YoutubeDefaultIcon />, text: 'YouTube Premium' },
+    { icon: <YoutubeStudioIcon />, text: 'YouTube Studio' },
+    { icon: <YoutubeMusicIcon />, text: 'YouTube Music' },
+    { icon: <YoutubeKidsIcon />, text: 'YouTube Kids' }
 ]
 
 export const lastOptions = [

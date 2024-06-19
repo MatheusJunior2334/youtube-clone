@@ -68,8 +68,8 @@
     position: fixed;
     top: 56px;
     width: 234px;
-    height: calc(100vh - 60px);
-    padding: 12px;
+    height: calc(100dvh - 60px);
+    padding: 12px 12px 0 12px;
     overflow-y: auto;
     scrollbar-width: none;
     
@@ -96,12 +96,44 @@
         height: 0;
         margin: 12px 0;
     }
-}
 
-// Responsividade
+    .footer {
+        padding: 0 12px 12px 12px;
 
-@media #{$ws1313} {
-    .sideMenuButton {
-        
+        .footerMid {
+            margin-top: 12px;
+        }
+
+        .footerTop, .footerMid {
+            span {
+                @include text-primary();
+                font-size: 13px;
+                font-weight: 500;
+                color: #AAAAAA;
+                margin-right: 8px;
+                white-space: nowrap;
+
+                cursor: pointer;
+            }
+        }
+
+        .footerBottom {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            row-gap: 10px;
+
+            h6 {
+                @include text-primary();
+                font-size: 12px;
+                font-weight: 300;
+                color: #717171;
+
+                a {
+                    font-size: 13px;
+                    color: rgb(159, 183, 225);
+                }
+            }
+        }
     }
 }

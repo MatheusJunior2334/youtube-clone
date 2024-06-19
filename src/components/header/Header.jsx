@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../../styles/Header.module.scss';
 
 //Left Side
@@ -15,8 +15,17 @@ import { BellIcon } from '../../assets/icons/header/BellIcon';
 import ProfileImage from '../../assets/images/header/ProfileImage.jpg';
 import { AppContext } from '../../contexts/AppContext';
 
-export function Header() {
+export default function Header() {
+    const [showBlueSearch, setShowBlueSearch] = useState(false);
     const { toggleBurgerMenu } = useContext(AppContext);
+
+    const handleFocus = () => {
+        setShowBlueSearch(true);
+    }
+
+    const handleBlur = () => {
+        setShowBlueSearch(false);
+    }
 
     return (
         <header id={styles.header}>
@@ -33,9 +42,15 @@ export function Header() {
                 </div>
 
                 {/*Center / Middle Side*/}
-                <div className={styles.midSide}>
+                <div className={`${styles.midSide} ${showBlueSearch ? styles.addBlueColor : ''}`}>
+                    {showBlueSearch && <div className={styles.blueIcon}><MagnifyingGlassIcon /></div>}
                     <form className={styles.input}>
-                        <input type="search" placeholder='Search' />
+                        <input
+                            type="search"
+                            placeholder='Search'
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
+                        />
 
                         {/*Magnifying Glass Icon*/}
                         <button className={styles.searchBtn}>
@@ -70,8 +85,10 @@ export function Header() {
                     </button>
 
                         {/*Profile Image*/}
-                    <button>
-                        <img src={ProfileImage} alt='Profile' />
+                    <button title='Access my GitHub profile'>
+                        <a href="https://github.com/MatheusJunior2334" target='_blank' rel='noopener noreferrer'>
+                            <img src={ProfileImage} alt='Profile' />
+                        </a>
                     </button>
                 </div>
             </nav>

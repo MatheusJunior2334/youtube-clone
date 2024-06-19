@@ -22,7 +22,7 @@ $distance-top-before: 68px;
         /*Start / Left Side*/
 
         .leftSide {
-            width: 20%;
+            width: 234px;
             display: flex;
             align-items: center;
 
@@ -61,6 +61,7 @@ $distance-top-before: 68px;
             }
 
             span {
+                @include text-primary();
                 font-size: 10px;
                 color: #AAA;
                 margin: 12px 0 0 -10px;
@@ -75,22 +76,46 @@ $distance-top-before: 68px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 40px;
-            flex: 1;
-            flex-basis: 1e-9px;
             padding: 0 16px;
+            flex: 0 1 732px;
+
+            &.addBlueColor {
+                .blueIcon {
+                    width: 40px;
+                    height: 40px;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    border-radius: 40px 0 0 40px;
+                    border: 1px solid #1C62B9;
+                    border-right: none;
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .input {
+                    margin-left: 0;
+                    input {
+                        border-radius: 0;
+                        border: 1px solid #1C62B9;
+                        border-left: none;
+                    }
+                }
+            }
 
             .input {
-                width: 74%;
+                flex: 1;
                 height: 40px;
                 display: flex;
-                border-radius: 40px;
                 background-color: #0F0F0F;
-                border: 2px solid rgba(168, 163, 163, 0.2);
+                margin-left: 40px;
                   
                 input {
-                    width: 536px;
-                    max-width: calc(100% - 68px);
+                    width: 100%;
                     font-size: 16px;
                     font-weight: 400;
                     background-color: transparent;
@@ -98,6 +123,8 @@ $distance-top-before: 68px;
                     border: 0;
                     outline: none;
                     color:hsla(0, 100%, 100%, 0.88);
+                    border-radius: 40px 0 0 40px;
+                    border: 1px solid rgba(168, 163, 163, 0.3);
                 }
 
                 .searchBtn {
@@ -119,7 +146,6 @@ $distance-top-before: 68px;
                     svg {
                         width: 24px;
                         height: 24px;
-                        filter: invert(100%);
                     }
                 }
             }

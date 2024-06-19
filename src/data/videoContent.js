@@ -1,49 +1,52 @@
-import RubyGrangerThumbnail from '../assets/images/thumbnails/Ruby Granger.webp';
-import RubyGrangerAvatar from '../assets/images/channel-avatars/Ruby Granger.jpg';
+import RubyGrangerThumbnail from '../assets/images/thumbnails/videos/RubyGranger.webp';
+import RubyGrangerAvatar from '../assets/images/channel-avatars/RubyGranger.jpg';
 
-import EllenAlaverdyanThumbnail from '../assets/images/thumbnails/Ellen Alaverdyan.webp';
-import EllenAlaverdyanAvatar from '../assets/images/channel-avatars/Ellen Plays Bass.jpeg';
+import EllenAlaverdyanThumbnail from '../assets/images/thumbnails/videos/EllenAlaverdyan.webp';
+import EllenAlaverdyanAvatar from '../assets/images/channel-avatars/EllenPlaysBass.jpeg';
 
-import SchoolOfRockThumbnail from '../assets/images/thumbnails/School of Rock.webp';
-import SchoolOfRockAvatar from '../assets/images/channel-avatars/School of Rock.jpg';
+import SchoolOfRockThumbnail from '../assets/images/thumbnails/videos/SchoolOfRock.webp';
+import SchoolOfRockAvatar from '../assets/images/channel-avatars/SchoolOfRock.jpg';
 
-import JeanRemillardThumbnail from '../assets/images/thumbnails/Jean Rémillard.webp';
-import JeanRemillardAvatar from '../assets/images/channel-avatars/Jean Rémillard.jpg';
+import JeanRemillardThumbnail from '../assets/images/thumbnails/videos/JeanRémillard.webp';
+import JeanRemillardAvatar from '../assets/images/channel-avatars/JeanRémillard.jpg';
 
-import ZeldaUniverseThumbnail from '../assets/images/thumbnails/Zelda.webp';
+import ZeldaUniverseThumbnail from '../assets/images/thumbnails/videos/Zelda.webp';
 import ZeldaUniverseAvatar from '../assets/images/channel-avatars/Zelda.jpg';
 
-import EasyLanguagesThumbnail from '../assets/images/thumbnails/Easy Languages.webp';
-import EasyLanguagesAvatar from '../assets/images/channel-avatars/Easy Languages.jpg';
+import EasyLanguagesThumbnail from '../assets/images/thumbnails/videos/EasyLanguages.webp';
+import EasyLanguagesAvatar from '../assets/images/channel-avatars/EasyLanguages.jpg';
 
 
-import BritishEnglishThumbnail from '../assets/images/thumbnails/British English.webp'
-import BritishEnglishAvatar from '../assets/images/channel-avatars/British English.jpg';
+import BritishEnglishThumbnail from '../assets/images/thumbnails/videos/BritishEnglish.webp'
+import BritishEnglishAvatar from '../assets/images/channel-avatars/BritishEnglish.jpg';
 
-import LandenRansenThumbnail from '../assets/images/thumbnails/Landen Hansen.webp';
-import LandenRansenAvatar from '../assets/images/channel-avatars/Landen Ransen.jpg';
+import LandenRansenThumbnail from '../assets/images/thumbnails/videos/LandenHansen.webp';
+import LandenRansenAvatar from '../assets/images/channel-avatars/LandenRansen.jpg';
 
-import BruceSpringsteenThumbnail from '../assets/images/thumbnails/Bruce Springsteen.webp';
-import BruceSpringsteenAvatar from '../assets/images/channel-avatars/Bruce Springsteen.jpg';
+import BruceSpringsteenThumbnail from '../assets/images/thumbnails/videos/BruceSpringsteen.webp';
+import BruceSpringsteenAvatar from '../assets/images/channel-avatars/BruceSpringsteen.jpg';
 
-import JOEVGMThumbnail from '../assets/images/thumbnails/XenobladeChroniclesDE.webp';
-import JOEVGMThumbnail2 from '../assets/images/thumbnails/XenobladeChronicles2.webp';
-import JOEVGMAvatar from '../assets/images/channel-avatars/JOE VGM.jpg';
+import JOEVGMThumbnail from '../assets/images/thumbnails/videos/XenobladeChroniclesDE.webp';
+import JOEVGMThumbnail2 from '../assets/images/thumbnails/videos/XenobladeChronicles2.webp';
+import JOEVGMAvatar from '../assets/images/channel-avatars/JOEVGM.jpg';
 
-import LonyThumbnail from '../assets/images/thumbnails/Lony.webp';
+import LonyThumbnail from '../assets/images/thumbnails/videos/Lony.webp';
 import LonyAvatar from '../assets/images/channel-avatars/Lony.jpg';
 
-import StevieWonderThumbnail from '../assets/images/thumbnails/Stevie Wonder.webp';
-import StevieWonderAvatar from '../assets/images/channel-avatars/Stevie Wonder.jpg';
+import StevieWonderThumbnail from '../assets/images/thumbnails/videos/StevieWonder.webp';
+import StevieWonderAvatar from '../assets/images/channel-avatars/StevieWonder.jpg';
 
-import NintendoMelodyThumbnail from '../assets/images/thumbnails/XenobladeChronicles3.webp';
+import NintendoMelodyThumbnail from '../assets/images/thumbnails/videos/XenobladeChronicles3.webp';
 import NintendoMelodyAvatar from '../assets/images/channel-avatars/NintendoMelody.jpg';
 
-import UnJadedJadeThumbnail from '../assets/images/thumbnails/Unjaded Jade.webp';
-import UnJadedJadeAvatar from '../assets/images/channel-avatars/Unjaded Jade.jpg';
+import UnJadedJadeThumbnail from '../assets/images/thumbnails/videos/UnjadedJade.webp';
+import UnJadedJadeAvatar from '../assets/images/channel-avatars/UnjadedJade.jpg';
 
-import NathanielThumbnail from '../assets/images/thumbnails/Nathaniel.webp';
+import NathanielThumbnail from '../assets/images/thumbnails/videos/Nathaniel.webp';
 import NathanielAvatar from '../assets/images/channel-avatars/Nathaniel.jpg';
+
+import BillyJoelThumbnail from '../assets/images/thumbnails/videos/BillyJoel.webp';
+import BillyJoelAvatar from '../assets/images/channel-avatars/BillyJoel.jpg';
 
 //Videos Informations (Details) - Part 1
 export const videoInfo = [
@@ -213,5 +216,16 @@ export const videoInfo = [
         channelName: 'Nathaniel Barlam',
         numberOfViews: '1.5M',
         timePosted: '7 years'
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=izzM9LXqP-U',
+        thumbnailImg: BillyJoelThumbnail,
+        videoDuration: '7:33',
+        avatarIcon: BillyJoelAvatar,
+        videoTitle: 'Billy Joel - Scenes from an Italian Restaurant (Official Music Video)',
+        channelName: 'Billy Joel',
+        numberOfViews: '1M',
+        timePosted: '2 years',
+        music: true
     }
 ]

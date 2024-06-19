@@ -53,8 +53,8 @@ export const MainBody = () => {
         setVideosPart2(shuffledVideos.slice(6, 9));
 
         const shuffledShorts = [...shortsInfo].sort(() => Math.random() - 0.5);
-        setShortsPart1(shuffledShorts.slice(0, 12));
-        setShortsPart2(shuffledShorts.slice(12))
+        setShortsPart1(shuffledShorts.slice(0, 10));
+        setShortsPart2(shuffledShorts.slice(10))
     }, []);
 
     const getDisplayedShorts = () => {
@@ -122,7 +122,7 @@ export const MainBody = () => {
                 </div>
 
                 <div className={styles.shortsFooter}>
-                    <button onClick={showMoreOrFewer} data-content={displayText}>
+                    <button onClick={showMoreOrFewer}>
                         <p>{displayText}</p>
                         <div className={styles.icon} style={{ transform: showMore ? 'rotate(180deg)' : 'rotate(0deg)' }}>
                             <ArrowIcon />
@@ -169,7 +169,7 @@ export const MainBody = () => {
                 </div>
 
                 <div className={styles.shortsFooter}>
-                    <button onClick={showMoreOrFewer2} data-content={displayText2}>
+                    <button onClick={showMoreOrFewer2}>
                         <p>{displayText2}</p>
                         <div className={styles.icon} style={{ transform: showMore2 ? 'rotate(180deg)' : 'rotate(0deg)' }}>
                             <ArrowIcon />

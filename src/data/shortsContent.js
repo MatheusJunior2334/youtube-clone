@@ -1,16 +1,23 @@
-import DeafGirlImage from '../assets/images/thumbnails/Deaf Girl.webp';
-import MooglesCaveImage from "../assets/images/thumbnails/Moogle's Cave.webp";
-import MayTreeImage from '../assets/images/thumbnails/May Tree.webp';
-import KimWildeImage from '../assets/images/thumbnails/Kim Wilde.webp';
-import MichaelJacksonImage from '../assets/images/thumbnails/Michael Jackson.webp';
-import StevieWonderImage from '../assets/images/thumbnails/StevieWonderShorts.webp';
-import HappyEarthImage from '../assets/images/thumbnails/Happy Earth.webp';
-import GlobalThingsImage from '../assets/images/thumbnails/Global Things.webp';
-import AbbytheoboistImage from '../assets/images/thumbnails/Abbytheoboist.webp';
-import Xenoblade3Image from '../assets/images/thumbnails/XenobladeChronicles3Shorts.webp';
-import FinalFantasyXVIImage from '../assets/images/thumbnails/FinalFantasyXVI.webp';
-import XenoGameImage from '../assets/images/thumbnails/XenoGame.webp';
-import FEAwakeningImage from '../assets/images/thumbnails/FireEmblemAwakening.webp';
+import DeafGirlImage from '../assets/images/thumbnails/shorts/DeafGirl.webp';
+import MooglesCaveImage from "../assets/images/thumbnails/shorts/Moogle'sCave.webp";
+import MayTreeImage from '../assets/images/thumbnails/shorts/MayTree.webp';
+import KimWildeImage from '../assets/images/thumbnails/shorts/KimWilde.webp';
+import MichaelJacksonImage from '../assets/images/thumbnails/shorts/MichaelJackson.webp';
+import StevieWonderImage from '../assets/images/thumbnails/shorts/StevieWonderShorts.webp';
+import HappyEarthImage from '../assets/images/thumbnails/shorts/HappyEarth.webp';
+import GlobalThingsImage from '../assets/images/thumbnails/shorts/GlobalThings.webp';
+import AbbytheoboistImage from '../assets/images/thumbnails/shorts/Abbytheoboist.webp';
+import Xenoblade3Image from '../assets/images/thumbnails/shorts/XenobladeChronicles3Shorts.webp';
+import FinalFantasyXVIImage from '../assets/images/thumbnails/shorts/FinalFantasyXVI.webp';
+import XenoGameImage from '../assets/images/thumbnails/shorts/XenoGame.webp';
+import FEAwakeningImage from '../assets/images/thumbnails/shorts/FireEmblemAwakening.webp';
+import JackBlackEltonJohnImage from '../assets/images/thumbnails/shorts/JackBlackEltonJohn.webp';
+import FltSaraImage from '../assets/images/thumbnails/shorts/FltSara.webp';
+import PeterGabrielImage from '../assets/images/thumbnails/shorts/PeterGabriel.webp';
+import SinaDrumsImage from '../assets/images/thumbnails/shorts/SinaDrums.webp';
+import BootsyCollinsImage from '../assets/images/thumbnails/shorts/BootsyCollins.webp';
+import ZipperImage from '../assets/images/thumbnails/shorts/Zipper.webp';
+import PrincessPeachImage from '../assets/images/thumbnails/shorts/PrincessPeach.webp';
 
 export const shortsInfo = [
     {
@@ -90,5 +97,47 @@ export const shortsInfo = [
         thumbnail: FEAwakeningImage,
         shortsTitle: 'We Should Cut Lucina Some Slack | Fire Emblem: Awakening || Inspiration Adoration #shorts',
         numberOfViews: '50K'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/iBGqjfYlvnw',
+        thumbnail: JackBlackEltonJohnImage,
+        shortsTitle: "Jack Black sings Elton John's song without Lyrics | @OfficialGrahamNorton | #shorts #jackblack",
+        numberOfViews: '10M'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/NxMF7mM5_QE',
+        thumbnail: FltSaraImage,
+        shortsTitle: '#2 A Window to the Past - #harrypotter',
+        numberOfViews: '334'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/_qYUnhu_jCY',
+        thumbnail: PeterGabrielImage,
+        shortsTitle: "Happy Birthday Peter! Here is Peter performing  'Solsbury Hill' throughout the decades",
+        numberOfViews: '109K'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/JdQQH5UDODg',
+        thumbnail: SinaDrumsImage,
+        shortsTitle: 'Are You Gonna Be My Girl #Shorts',
+        numberOfViews: '372K'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/hfGSLB_HEuc',
+        thumbnail: BootsyCollinsImage,
+        shortsTitle: 'Bootsy Collins: The Bass LEGEND Behind Parliament Funkiest Grooves 🎶🎸 #funk #music #parliament #bass',
+        numberOfViews: '17K'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/Sz5Erz3MAME',
+        thumbnail: ZipperImage,
+        shortsTitle: 'Why Zippers Get Stuck 🤔',
+        numberOfViews: '8.2M'
+    },
+    {
+        shortsUrl: 'https://www.youtube.com/shorts/z7TqQ5nOM-s',
+        thumbnail: PrincessPeachImage,
+        shortsTitle: 'Super Mario Bros. Wonder – Say it with flowers! ❤️ #Shorts',
+        numberOfViews: '1.9M'
     }
 ]

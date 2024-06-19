@@ -14,13 +14,13 @@ const SideOptionsSmallButtonProps = ({ icon, text }) => {
 
 export const SideOptionsSmall = () => {
     return (
-        <div id={styles.sideOptionsSmall}>
+        <nav id={styles.sideOptionsSmall}>
             {sideOptionsSmall.map((button, index) => (
                 <SideOptionsSmallButtonProps
                     key={index}
                     {...button}
                 />
             ))}
-        </div>
+        </nav>
     )
 }

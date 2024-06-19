@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styles from '../../styles/MainHomePage.module.scss';
 import { SideOptions } from './sideOptions/SideOptions';
 import { TopOptions } from './topOptions/TopOptions';
@@ -8,22 +8,41 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { SideOptionsSmall } from './sideOptions/SideOptionsSmall';
 import { SideMenu } from './sideOptions/SideMenu';
 
-export const MainHomePage = () => {
+export default function MainHomePage() {
     const { isBurgerMenuOpen } = useContext(AppContext);
     const { width } = useWindowSize();
 
     const renderSideOptions = () => {
         if (!isBurgerMenuOpen) {
             return <SideOptions />
-        } else {
-            return <SideOptionsSmall />
         }
+        return <SideOptionsSmall />
     }
+
+    useEffect(() => {
+        const body = document.body;
+
+        if (isBurgerMenuOpen && width <= 1312) {
+            const scrollPosition = document.documentElement.scrollTop;
+
+            body.style.top = `-${scrollPosition}px`;
+            body.classList.add(styles.noscroll);
+        } else {
+            const scrollPosition = -parseInt(body.style.top);
+            body.style.top = '';
+            body.classList.remove(styles.noscroll);
+            window.scrollTo(0, scrollPosition);
+        }
+    }, [isBurgerMenuOpen, width])
 
     return (
         <main id={styles.mainContent}>
             <div className={styles.sideOptions}>
-                {renderSideOptions()}
+                {width > 1312 ? (
+                    renderSideOptions()
+                ) : (
+                    <SideOptionsSmall />
+                )}
             </div>
             <div className={`${styles.innerMain} ${isBurgerMenuOpen ? styles.sideOptionsSmallOpen : ''}`}>
                 <TopOptions />
